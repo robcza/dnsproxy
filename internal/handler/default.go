@@ -4,7 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/AdguardTeam/dnsproxy/proxy"
+	"github.com/robcza/dnsproxy/proxy"
 	"github.com/AdguardTeam/golibs/hostsfile"
 )
 

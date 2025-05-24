@@ -4,9 +4,9 @@ import (
 	"net"
 	"testing"
 
-	"github.com/AdguardTeam/dnsproxy/internal/dnsproxytest"
-	"github.com/AdguardTeam/dnsproxy/proxy"
-	"github.com/AdguardTeam/dnsproxy/upstream"
+	"github.com/robcza/dnsproxy/internal/dnsproxytest"
+	"github.com/robcza/dnsproxy/proxy"
+	"github.com/robcza/dnsproxy/upstream"
 	"github.com/AdguardTeam/golibs/testutil"
 	"github.com/miekg/dns"
 	"github.com/stretchr/testify/assert"

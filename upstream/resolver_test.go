@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AdguardTeam/dnsproxy/internal/dnsproxytest"
-	"github.com/AdguardTeam/dnsproxy/upstream"
+	"github.com/robcza/dnsproxy/internal/dnsproxytest"
+	"github.com/robcza/dnsproxy/upstream"
 	"github.com/AdguardTeam/golibs/errors"
 	"github.com/AdguardTeam/golibs/logutil/slogutil"
 	"github.com/miekg/dns"

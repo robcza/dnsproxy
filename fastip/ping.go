@@ -4,7 +4,7 @@ import (
 	"net/netip"
 	"time"
 
-	"github.com/AdguardTeam/dnsproxy/internal/bootstrap"
+	"github.com/robcza/dnsproxy/internal/bootstrap"
 	"github.com/AdguardTeam/golibs/logutil/slogutil"
 )
 

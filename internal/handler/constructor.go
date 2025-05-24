@@ -3,7 +3,7 @@ package handler
 import (
 	"net/netip"
 
-	"github.com/AdguardTeam/dnsproxy/proxy"
+	"github.com/robcza/dnsproxy/proxy"
 	"github.com/miekg/dns"
 )
 

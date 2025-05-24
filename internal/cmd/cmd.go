@@ -12,8 +12,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/AdguardTeam/dnsproxy/internal/version"
-	"github.com/AdguardTeam/dnsproxy/proxy"
+	"github.com/robcza/dnsproxy/internal/version"
+	"github.com/robcza/dnsproxy/proxy"
 	"github.com/AdguardTeam/golibs/errors"
 	"github.com/AdguardTeam/golibs/logutil/slogutil"
 	"github.com/AdguardTeam/golibs/osutil"

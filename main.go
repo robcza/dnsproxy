@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/AdguardTeam/dnsproxy/internal/cmd"
-)
+import "github.com/robcza/dnsproxy/internal/cmd"
 
 func main() {
 	cmd.Main()
