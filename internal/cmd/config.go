@@ -192,6 +192,14 @@ type configuration struct {
 	// lookups of private addresses, including the requests for authority
 	// records, such as SOA and NS.
 	UsePrivateRDNS bool `yaml:"use-private-rdns"`
+
+	// ClientCertPath is the path to the client certificate file for mutual TLS
+	// authentication with upstream DoH servers.
+	ClientCertPath string `yaml:"client-cert"`
+
+	// ClientKeyPath is the path to the client private key file for mutual TLS
+	// authentication with upstream DoH servers.
+	ClientKeyPath string `yaml:"client-key"`
 }
 
 // parseConfig returns options parsed from the command args or config file.  If

@@ -65,6 +65,8 @@ const (
 	pendingRequestsEnabledIdx
 	dns64Idx
 	usePrivateRDNSIdx
+	clientCertPathIdx
+	clientKeyPathIdx
 )
 
 // commandLineOption contains information about a command-line option: its long
@@ -391,6 +393,18 @@ var commandLineOptions = []*commandLineOption{
 		short:     "",
 		valueType: "",
 	},
+	clientCertPathIdx: {
+		description: "Path to a file with the client certificate.",
+		long:        "client-cert-path",
+		short:       "cc",
+		valueType:   "path",
+	},
+	clientKeyPathIdx: {
+		description: "Path to a file with the client key.",
+		long:        "client-key-path",
+		short:       "ck",
+		valueType:   "path",
+	},
 }
 
 // parseCmdLineOptions parses the command-line options.  conf must not be nil.
@@ -448,6 +462,8 @@ func parseCmdLineOptions(conf *configuration) (err error) {
 		pendingRequestsEnabledIdx: &conf.PendingRequestsEnabled,
 		dns64Idx:                  &conf.DNS64,
 		usePrivateRDNSIdx:         &conf.UsePrivateRDNS,
+		clientCertPathIdx:         &conf.ClientCertPath,
+		clientKeyPathIdx:          &conf.ClientKeyPath,
 	} {
 		addOption(flags, fieldPtr, commandLineOptions[i])
 	}

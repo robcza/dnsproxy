@@ -103,6 +103,14 @@ type Options struct {
 	// PreferIPv6 tells the bootstrapper to prefer IPv6 addresses for an
 	// upstream.
 	PreferIPv6 bool
+
+	// ClientCertPath is the path to the client certificate file for mutual TLS
+	// authentication with upstream servers. Used for DoH, DoT, and DoQ.
+	ClientCertPath string
+
+	// ClientKeyPath is the path to the client private key file for mutual TLS
+	// authentication with upstream servers. Used for DoH, DoT, and DoQ.
+	ClientKeyPath string
 }
 
 // Clone copies o to a new struct.  Note, that this is not a deep clone.
@@ -120,6 +128,8 @@ func (o *Options) Clone() (clone *Options) {
 		RootCAs:                   o.RootCAs,
 		CipherSuites:              o.CipherSuites,
 		Logger:                    o.Logger,
+		ClientCertPath:            o.ClientCertPath,
+		ClientKeyPath:             o.ClientKeyPath,
 	}
 }
 

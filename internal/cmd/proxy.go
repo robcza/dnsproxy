@@ -144,6 +144,8 @@ func (conf *configuration) initUpstreams(
 		HTTPVersions:       httpVersions,
 		InsecureSkipVerify: conf.Insecure,
 		Timeout:            timeout,
+		ClientCertPath:     conf.ClientCertPath,
+		ClientKeyPath:      conf.ClientKeyPath,
 	}
 	boot, err := initBootstrap(ctx, l, conf.BootstrapDNS, bootOpts)
 	if err != nil {
@@ -156,6 +158,8 @@ func (conf *configuration) initUpstreams(
 		InsecureSkipVerify: conf.Insecure,
 		Bootstrap:          boot,
 		Timeout:            timeout,
+		ClientCertPath:     conf.ClientCertPath,
+		ClientKeyPath:      conf.ClientKeyPath,
 	}
 	upstreams := loadServersList(conf.Upstreams)
 
@@ -165,10 +169,12 @@ func (conf *configuration) initUpstreams(
 	}
 
 	privateUpsOpts := &upstream.Options{
-		Logger:       l,
-		HTTPVersions: httpVersions,
-		Bootstrap:    boot,
-		Timeout:      min(defaultLocalTimeout, timeout),
+		Logger:         l,
+		HTTPVersions:   httpVersions,
+		Bootstrap:      boot,
+		Timeout:        min(defaultLocalTimeout, timeout),
+		ClientCertPath: conf.ClientCertPath,
+		ClientKeyPath:  conf.ClientKeyPath,
 	}
 	privateUpstreams := loadServersList(conf.PrivateRDNSUpstreams)
 
